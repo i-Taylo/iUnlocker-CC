@@ -1,0 +1,91 @@
+# Device frequency | default iUnlocker value is: 0
+qti.iunlocker.sys.freq=0
+
+# Drivers optimization level| default iUnlocker level: 255
+qti.iunlocker.sys.drv=255
+
+# Daemon detection quality
+# value: 1 == Extreme
+# value 2 == high
+# value 3 == balanced
+# value 4 == medium
+# value 5 == low
+qti.iunlocker.sys.daemon=3
+
+
+# OTA updater conf
+# value: 1 == use device network configuration
+# value: 2 == use Custom network configuration, if $user faced network issues while updating iUnlocker this will fix it.
+qti.iunlocker.sys.updater=2
+
+
+# Cross games encryption ( boolean )
+# 1 == true
+# 0 == false
+qti.iunlocker.sys.enc=1
+
+
+
+
+
+# below is hex codes. ARM64
+#1: (00 00 80 52) == 0, false
+#2: (20 00 80 52) == 1, true
+# {RET} will be found in the default game libraries
+
+# arm games will not be controllable by the $user :(
+
+# Whether libil2cpp.so found in some games
+# Default value: (00 AE 80 52 C0 03 5F D6) | ARM64
+# This required by lib-dispatch.so, will be auto-generate when $user enter unity games
+qti.iunlocker.il2cpp.sync=00 AE 80 52 C0 03 5F D6
+
+
+# Whether libUE4.so found in some games
+# Default value: (00 AE 80 52 C0 03 5F D6) | ARM64
+# This required by lib-dispatchUE4.so, will be auto-generate when $user enter Unreal Engine games
+qti.iunlocker.UE4.sync=00 AE 80 52 C0 03 5F D6
+
+
+# Whether *.so found in some games
+# Default value: (00 AE 80 52 C0 03 5F D6) | ARM64
+# This required by lib-dispatchUE4.so, will be auto-generate when $user enter Unreal Engine games
+qti.iunlocker.other.games.sync=20 00 80 52 C0 03 5F D6
+
+
+
+# c-sync service | default value: 1
+qti.iunlocker.csync=1
+
+# dumper level | default value: 100
+# Don't set it to higher value because it might damage your phone
+# Leave it to 100 or reduce it. its up to you, but don't go higher
+# i meant to not cap it because new devices needs higher value which will be changed depends on the phone
+qti.iunlocker.sodumper=100
+
+
+# Basics, its capped so if you changed anything it'll stay 'true'
+qti.iunlocker.modules=1
+qti.iunlocker.services=1
+qti.iunlocker.props=1
+qti.iunlocker.xmls=1
+qti.iunlocker.vendors=1
+qti.iunlocker.assets=1
+qti.iunlocker.res=1
+qti.iunlocker.photos=1
+qti.iunlocker.ai.core=1
+qti.iunlocker.Mi=1
+qti.iunlocker.POCO=1
+qti.iunlocker.REDMI=1
+qti.iunlocker.SAMSUNG=1
+qti.iunlocker.REALME=1
+qti.iunlocker.unknown=qtr_daemon
+qti.iunlocker.freq=qtr_table
+qti.iunlocker.text2text=weIHQ+XLRBTGG/0lanQV9xhdavU46ubtWidedPCZWTA=
+qti.iunlocker.decompiler=iUnlocker-fuse
+qti.iunlocker.wifi.speed=qtr_wifi
+qti.iunlocker.liquid.storage=qtr_liquid_storage
+qti.iunlocker.AI.Alg=qtr_AI
+qti.iunlocker.framerate=qtr_fps_rate
+qti.iunlocker.HZ=qtr_3Dmarker
+qti.iunlocker.defsb=/system/bin/sh:/bin/sh:env sh
